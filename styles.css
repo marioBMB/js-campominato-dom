@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cecece;
+}
+
+div.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px #555;
+}
+
+header {
+    height: 80px;
+    line-height: 80px;
+    padding-right: 40px;
+    background-color: white;
+}
+
+header > div{
+    height: 100%;
+    width: auto;
+}
+
+#logo {
+    height: 100%;
+}
+
+#logo h1 {
+    float: right;
+}
+
+#logo img {
+    height: 100%;
+}
+
+main {
+    background-color: #7fffd4;
+    height: calc(100vh - 80px - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+}
+
+#grid {
+    max-width: calc(60px * 10);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.col:hover {
+    opacity: 0.7;
+}
+
+.col.active {
+    background-color: #6495ed;
+    color: white;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+
+footer {
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    padding: 0 20px;
+}
+
+button, select {
+    background-color: #e9e9ed;
+    border-radius: 4px;
+    border: 1px solid #9f9fab;
+    padding: 3px;
+}
+
+select#level {
+    width: 150px;
+}
+
+button#generate {
+    width: 100px;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255, 0.7);
+
+}
+
+.message.win {
+
+    font-size: 36px;
+    color: green;
+    text-shadow: 2px 1px 2px black;
+}
+
+.message.lost {
+
+    font-size: 36px;
+    color: maroon;
+    text-shadow: 2px 1px 2px black;
+}
+
+
+.bomb.active {
+    background-color: red;
+    background-image: url("img/1f4a4.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
